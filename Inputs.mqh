@@ -7,4 +7,5 @@ int    CellHeight;
 int    HeaderFontSize;
 int    CellFontSize;
 double DailyDrawdownLimit;
+double TradeRiskLimit;
 }
