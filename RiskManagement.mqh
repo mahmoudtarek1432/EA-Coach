@@ -38,7 +38,7 @@ void DrawdownProtection(Inputs& inputs){
    double dailyBalance = NormalizeDouble(GetDailyBalance() + GetUnrealizedReturns(), 2);
    int total_positions = PositionsTotal();
    
-   if((inputs.DailyDrawdownLimit / 2) >= dailyBalance && total_positions > 0){
+   if( dailyBalance <= -1 * (inputs.DailyDrawdownLimit / 2) && total_positions > 0){
       CloseAllPositions();
       Alert("DAILY DRAWDOWN PROTECTION ACTIVATED. NO TRADING FOR THE DAY...");
       SendDailyLoseEmail();
