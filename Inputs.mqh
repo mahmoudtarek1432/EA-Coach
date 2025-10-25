@@ -8,4 +8,5 @@ int    HeaderFontSize;
 int    CellFontSize;
 double DailyDrawdownLimit;
 double TradeRiskLimit;
+double StandardLot;
 }
